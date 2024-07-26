@@ -59,7 +59,7 @@ class CommandLine:
         
         elif args.decodefile:
             if args.output:
-                morsekit.core.codefile(args.codefile,args.output)
+                morsekit.core.decodefile(args.decodefile,args.output)
             else:
                 morsekit.core.decodefile(args.decodefile)
         
