@@ -30,13 +30,14 @@ class core:
                 if not text.isspace():
                     for word in text.split("/"):
                         for value in word.split(" "):
-                            if value in morse.values():
-                                for keys,values in morse_list:
-                                    if value == values:
-                                        key = keys
-                                        result += key
-                            else:
-                                raise ValueError("Morse code not detected!")
+                            if value:
+                                if value in morse.values():
+                                    for keys,values in morse_list:
+                                        if value == values:
+                                            key = keys
+                                            result += key
+                                else:
+                                    raise ValueError("Morse code Invalid!")
                         result += " "
                     return result
         except ValueError as ex:
