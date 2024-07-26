@@ -8,7 +8,7 @@ class core:
                 for i in text:
                     if not text.isspace() and any(morse.keys()):
                         if i.isspace():
-                            result += "/ "
+                            result += "/"
                             continue
                         result += morse[i.lower()]
                     else:
