@@ -1,10 +1,14 @@
+import sys
 import argparse
 import morsekit
 class CommandLine:
     def run():
         parser = argparse.ArgumentParser(
             description="Morse Code Translate by oujirate",
-            usage='python %(prog)s [options] "<text/file>" -o "<output file>"'
+            usage='python %(prog)s [options] "<text/file>" -o "<output file>"',
+            epilog='''Example:
+            python morsecode.py -c "Lorem Ipsum" |
+            python morsecode.py -df "C:/text.txt" -o "output.txt"''' 
         )
         group = parser.add_mutually_exclusive_group()
 
@@ -34,6 +38,10 @@ class CommandLine:
             help="File output location"
         )
         args = parser.parse_args()
+
+        if not len(sys.argv) > 1:
+            parser.print_help()
+            sys.exit()
 
         if args.code:
             code = morsekit.core.code(args.code)
