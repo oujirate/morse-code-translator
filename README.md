@@ -11,7 +11,7 @@ Python CLI script used to translate morse code to text or text to morse code. In
 1. Install python in the microsoft store or on the official website [python.org](https://www.python.org/downloads/).
 2. copy the `morse-code-translator` repo to the local directory.
     ```sh
-    git clone https://github.com/oujirate/morse-code-translator.git
+    git clone https://github.com/oujisan/morse-code-translator.git
     ```
 3. Open a terminal and run the script in the file `morsecode.py`
    ```sh
