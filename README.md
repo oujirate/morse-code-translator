@@ -1,42 +1,42 @@
 # Morse Code Translator
-Script Python CLI yang digunakan untuk menerjemahkan sandi morse ke text maupun text ke sandi morse. Selain itu, juga bisa digunakan untuk code atau encode file yang berisi teks maupun sandi morse. Script dijalankan pada Command Line Interface(CLI) dengan petunjuk yang mudah untuk dimengerti. Semoga dengan adanya script ini dapat membantu atau memudahkan pengguna untuk menerjemahkan sandi morse.
+Python CLI script used to translate morse code to text or text to morse code. In addition, it can also be used to code or encode files that contain text or morse code. The script is run on the Command Line Interface (CLI) with instructions that are easy to understand. Hopefully, this script can help or make it easier for users to translate the morse password.
 
-## Batasan
-- Hanya bisa dijalankan pada Terminal atau Command Prompt dan sejenisnya.
-- Kode Morse hanya mendukung alphabet, numerik dan beberapa simbol sebagai berikut: `?` , `!` , `.` , `;` , `:` , `+` , `-` , `/` , `=` , `,`.
-- Hanya bisa menerjemahkan sandi morse dalam bentuk text atau text di dalam file, belum bisa menerjemahkan melalui audio.
-- Penulisan spasi pada sandi morse menggunakan tanda `/`
+## Restrictions
+- Can only be run on Terminal or Command Prompt and the like.
+- Morse code only supports alphabetic, numeric and some symbols as follows: `?` , `!` , `.` , `;` , `:` , `+` , `-` , `/` , `=` , `,`.
+- It can only translate morse ciphers in text or text in a file, it cannot translate through audio.
+- Writing spaces in morse code using the `/` sign.
   
-## Instalasi & Penggunaan script
-1. Install python pada microsoft store atau pada website resmi [python.org](https://www.python.org/downloads/).
-2. salin repo `morse-code-translator` ke local directory.
-    ```sh
+## Installation & Usage of the script
+1. Install python in the microsoft store or on the official website [python.org](https://www.python.org/downloads/).
+2. copy the `morse-code-translator` repo to the local directory.
+    ``sh
     git clone https://github.com/oujirate/morse-code-translator.git
     ```
-3. Buka terminal dan jalankan script pada file `morsecode.py`
+3. Open a terminal and run the script in the file `morsecode.py`
    ```sh
    python morsecode.py
    ```
-   Maka akan diarahkan kepada petunjuk penggunaan dari script dan contohnya.
+   This will lead to the instructions for using the script and an example.
    
-## Dokumentasi Argumen 
+## Argument Documentation
 **USAGE** :
 ```sh
 python morsedecode.py [options] <teks/file> -o <output>`
 ```
-(Argumen `-o` dapat digunakan optional pada codefile atau decodefile. Apabila tidak memakai `-o` secara otomatis hasil dari de/code akan berada pada `morse-code-translator/output.txt`)
-- `-c` , `--code` : Mengubah teks menjadi sandi morse dan menampilkannya pada terminal.
-- `-d` , `--decode` : Mengubah sandi morse menjadi teks dan menampilkannya pada terminal.
-- `-cf` , `--codefile` : Mengubah file yang berisi kumpulan teks menjadi sandi morse tanpa merubah posisi baris dari file.
-- `-df` , `--decodefile` : Mengubah file yang berisi kumpulan sandi morse menjadi teks tanpa mengubah posisi baris dari file.
-- `-h` , `--help` : Menampilkan pesan untuk membantu pengguna menggunakan script.
+(The `-o` argument can be used optionally in the codefile or decodefile. If no `-o` is used, the result of de/code will automatically be in `morse-code-translator/output.txt`)
+- `-c`, `-code`: Convert text into morse code and display it on the terminal.
+- `-d` , `-decode` : Converts morse cipher to text and displays it on the terminal.
+- `-cf`, `-codefile` : Convert a file containing a collection of text to morse cipher without changing the line position of the file.
+- `-df`, `-decodefile` : Convert a file containing a collection of morse ciphers to text without changing the line position of the file.
+- `-h`, `--help` : Display a message to help the user use the script.
 
-## Contoh Penggunaan
-```sh
-python morsecode.py -c "Lorem Ipsum"
+## Usage Example
+``sh
+python morsecode.py -c “Lorem Ipsum”
 ```
 ```sh
-python morsecode.py -df "sandi.txt" -o "D:/data/output.txt"
+python morsecode.py -df “sandi.txt” -o “D:/data/output.txt”
 ```
 
 ## Build-In
